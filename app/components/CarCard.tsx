@@ -12,6 +12,8 @@ interface CarCardProps {
 const CarCard = ({ car }: CarCardProps) => {
   const { city_mpg, year, make, model, transmission, drive } = car;
 
+  const [isOpen, setIsOpen] = useState(false)
+
   const carRent = calculateCarRent(city_mpg, year);
 
   return (
@@ -79,7 +81,10 @@ const CarCard = ({ car }: CarCardProps) => {
 
             }}/>
         </div>
+
       </div>
+
+      <CarDetails/>
     </div>
   );
 };
