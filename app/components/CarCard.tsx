@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 
+
 import { calculateCarRent, generateCarImageUrl } from "../utils/index";
 import { CarProps } from "../types/index";
 import CustomButton from "./CustomButton";
