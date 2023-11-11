@@ -2,9 +2,9 @@ import CarCard from "./CarCard";
 import CustomButton from "./CustomButton";
 import CustomFilter from "./CustomFilter";
 import Footer from "./Footer";
-import Navbar from "./Navbar";
+import NavBar from "./Navbar";
 import ShowMore from "./ShowMore";
-import SearchBar from "./SearchBar";
+import SearchBar from "./Searchbar";
 import Hero from "./Hero";
 
 export {
@@ -13,7 +13,7 @@ export {
   CustomButton,
   CustomFilter,
   Footer,
-  Navbar,
+  NavBar,
   ShowMore,
   SearchBar,
 };
