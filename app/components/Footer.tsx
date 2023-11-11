@@ -15,13 +15,13 @@ const Footer = () => (
       </div>
 
       <div className="footer__links">
-        {footerLinks.map((item) => (
-          <div key={item.title} className="footer__link">
+        {footerLinks.map((item, index) => (
+          <div key={index} className="footer__link">
             <h3 className="font-bold">{item.title}</h3>
             <div className="flex flex-col gap-5">
-              {item.links.map((link) => (
+              {item.links.map((link, index) => (
                 <Link
-                  key={link.title}
+                  key={index}
                   href={link.url}
                   className="text-gray-500"
                 >
