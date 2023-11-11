@@ -1,17 +1,17 @@
 "use client";
 import { useState, Fragment } from "react";
-import { SearchManuFacturerProps } from "../types/index";
+import { SearchManufacturerProps } from "../types/index";
 import { Combobox, Transition } from "@headlessui/react";
 import Image from "next/image";
 import { manufacturers } from "../constants";
 
 const SearchManufacturer = ({
   manufacturer,
-  setManuFacturer,
-}: SearchManuFacturerProps) => {
+  setManufacturer,
+}: SearchManufacturerProps) => {
   const [query, setQuery] = useState("");
 
-  const filteredManuFacturers =
+  const filteredManufacturers =
     query === ""
       ? manufacturers
       : manufacturers.filter((item) =>
@@ -23,7 +23,7 @@ const SearchManufacturer = ({
 
   return (
     <div className="search-manufacturer">
-      <Combobox value={manufacturer} onChange={setManuFacturer}>
+      <Combobox value={manufacturer} onChange={setManufacturer}>
         <div className="relative w-full">
           <Combobox.Button className="absolute top-[14px]">
             <Image
@@ -49,7 +49,7 @@ const SearchManufacturer = ({
             afterLeave={() => setQuery("")}
           >
             <Combobox.Options>
-              {filteredManuFacturers.map((item) => (
+              {filteredManufacturers.map((item) => (
                 <Combobox.Option
                 key={item}
                 className={({ active }) =>
